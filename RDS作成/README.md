@@ -131,5 +131,5 @@ MySQL [(itope)]> UPDATE members SET role = 'リーダー' WHERE name = '吉村';
 # DELETE FROM テーブル名 WHERE 条件;
 
 # 安田さんのレコードを削除する
-MySQL [(itope)]> delete from members where name = '安田';
+MySQL [(itope)]> DELETE FROM members WHERE name = '安田';
 ~~~
