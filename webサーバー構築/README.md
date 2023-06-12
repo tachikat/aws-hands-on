@@ -6,7 +6,7 @@
 $ sudo dnf nginx -y
 
 # nginx起動
-$ sudo sytemctl start nginx
+$ sudo systemctl start nginx
 
 # 起動確認
 $ sudo systemctl status nginx
