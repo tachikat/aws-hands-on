@@ -91,8 +91,11 @@ MySQL [(itope)]> select * from members;
 # Aチームのみ抽出
 MySQL [(itope)]> select * from members where team = 'A';
 
-# Aチームのかつ、役割がメンバーのみ抽出
+# Aチームかつ、役割がメンバーのみ抽出
 MySQL [(itope)]> select * from members where team = 'A' and role = 'メンバー';
+
+# Aチームのメンバーの名前のみ抽出
+MySQL [(itope)]> select name from members where team = 'A';
 ~~~
 
 #### UPDATE
