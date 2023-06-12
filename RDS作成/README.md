@@ -28,9 +28,7 @@ mysqlのプロンプトが、表示されればOK
 ~~~
 
 ## SQL操作
-
 ### DB・テーブル作成
-
 ~~~
 # DB作成（itopeを作成する）
 MySQL [(none)]> create database itope;
@@ -51,8 +49,8 @@ role VARCHAR(10)
 
 # 想定通りのカラム情報を持ったテーブルを作成できたか確認
 MySQL [(itope)]> show columns from members;
-
 ~~~
+
 ### データ操作
 #### INSERT
 ~~~
