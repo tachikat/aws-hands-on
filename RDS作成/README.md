@@ -29,7 +29,7 @@ mysqlのプロンプトが、表示されればOK
 
 ## SQL操作
 
-# DB・テーブル作成
+### DB・テーブル作成
 
 ~~~
 # DB作成（itopeを作成する）
@@ -52,12 +52,15 @@ role VARCHAR(10)
 # 想定通りのカラム情報を持ったテーブルを作成できたか確認
 MySQL [(itope)]> show columns from members;
 
+~~~
+### データ操作
+#### INSERT
+~~~
 # membersテーブルにレコード挿入
 MySQL [(itope)]> insert into members (name, team, role) VALUES ('花谷', 'A', 'チーム長');
 
 # membersテーブルのレコードを確認
 MySQL [(itope)]> select * from members;
-
 
 # membersテーブルにどんどん挿入
 川村　A　チーム長
@@ -78,7 +81,10 @@ MySQL [(itope)]> insert into members (name, team, role) VALUES ('雑賀', 'B' , 
 MySQL [(itope)]> insert into members (name, team, role) VALUES ('吉村', 'B' , 'メンバー');
 MySQL [(itope)]> insert into members (name, team, role) VALUES ('安田', 'C' , 'チーム長');
 
+~~~
 
+#### SELECT
+~~~
 # membersテーブルのレコードを確認
 MySQL [(itope)]> select * from members;
 
@@ -87,11 +93,16 @@ MySQL [(itope)]> select * from members where team = 'A';
 
 # Aチームのかつ、役割がメンバーのみ抽出
 MySQL [(itope)]> select * from members where team = 'A' and role = 'メンバー';
+~~~
 
+#### UPDATE
+~~~
 # 吉村さんの役割をリーダーに変更する
 MySQL [(itope)]> update members set role = 'リーダー' WHERE name = '吉村';
+~~~
 
+#### DELETE
+~~~~
 # 安田さんのレコードを削除する
 MySQL [(itope)]> delete from members where name = '安田';
-
 ~~~
