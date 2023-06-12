@@ -30,14 +30,24 @@ mysqlのプロンプトが、表示されればOK
 ## SQL操作
 ### DB・テーブル作成
 ~~~
+# DB作成構文
+# CREATE DATABASE <DB名>;
+
 # DB作成（itopeを作成する）
-MySQL [(none)]> create database itope;
+MySQL [(none)]> CREATE DATABASE itope;
 
 # DB一覧
 MySQL [(none)]> show databases;
 
 # 使用するDBを設定
 MySQL [(none)]> use itope;
+
+# テーブル作成構文
+# CREATE TABLE <テーブル名> (
+# カラム名 データ型 オプション,
+# カラム名 データ型 オプション,
+# ...
+# );
 
 # テーブルを作成(members)
 MySQL [(itope)]> CREATE TABLE members (
@@ -54,8 +64,15 @@ MySQL [(itope)]> show columns from members;
 ### データ操作
 #### INSERT
 ~~~
+# レコード挿入構文
+# INSERT INTO テーブル名 (カラム名, ... ) VALUES (値, ...);
+
 # membersテーブルにレコード挿入
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('花谷', 'A', 'チーム長');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('花谷', 'A', 'チーム長');
+
+
+# レコード参照構文
+# SELECT カラム名 FROM テーブル名;
 
 # membersテーブルのレコードを確認
 MySQL [(itope)]> select * from members;
@@ -83,27 +100,36 @@ MySQL [(itope)]> insert into members (name, team, role) VALUES ('安田', 'C' , 
 
 #### SELECT
 ~~~
+# レコード参照構文（WHERE条件追加）
+# SELECT カラム名 FROM テーブル名 WHERE カラム名 = 値;
+
 # membersテーブルのレコードを確認
-MySQL [(itope)]> select * from members;
+MySQL [(itope)]> SELECT * FROM members;
 
 # Aチームのみ抽出
-MySQL [(itope)]> select * from members where team = 'A';
+MySQL [(itope)]> SELECT * FROM members WHERE team = 'A';
 
 # Aチームかつ、役割がメンバーのみ抽出
-MySQL [(itope)]> select * from members where team = 'A' and role = 'メンバー';
+MySQL [(itope)]> SELECT * FROM members WHERE team = 'A' and role = 'メンバー';
 
 # Aチームのメンバーの名前のみ抽出
-MySQL [(itope)]> select name from members where team = 'A';
+MySQL [(itope)]> SELECT name FROM members WHERE team = 'A';
 ~~~
 
 #### UPDATE
 ~~~
+# レコード更新構文
+# UPDATE テーブル名 set 変更する値のカラム名 = 変更後の値 WHERE 条件を適用させるカラム = 値;
+
 # 吉村さんの役割をリーダーに変更する
-MySQL [(itope)]> update members set role = 'リーダー' WHERE name = '吉村';
+MySQL [(itope)]> UPDATE members SET role = 'リーダー' WHERE name = '吉村';
 ~~~
 
 #### DELETE
 ~~~~
+# レコード削除構文
+# DELETE FROM テーブル名 WHERE 条件;
+
 # 安田さんのレコードを削除する
 MySQL [(itope)]> delete from members where name = '安田';
 ~~~
