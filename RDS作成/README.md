@@ -52,7 +52,7 @@ MySQL [(none)]> use itope;
 # テーブルを作成(members)
 MySQL [(itope)]> CREATE TABLE members (
 ID       INT(3) PRIMARY KEY AUTO_INCREMENT,
-Name     VARCHAR(50),
+name     VARCHAR(50),
 team VARCHAR(10),
 role VARCHAR(10)
 );
