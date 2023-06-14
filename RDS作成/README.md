@@ -51,8 +51,8 @@ MySQL [(none)]> use itope;
 
 # テーブルを作成(members)
 MySQL [(itope)]> CREATE TABLE members (
-ID       INT(3) PRIMARY KEY AUTO_INCREMENT,
-name     VARCHAR(50),
+ID INT(3) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50),
 team VARCHAR(10),
 role VARCHAR(10)
 );
@@ -75,7 +75,7 @@ MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('花谷', 'A', '
 # SELECT カラム名 FROM テーブル名;
 
 # membersテーブルのレコードを確認
-MySQL [(itope)]> select * from members;
+MySQL [(itope)]> SELECT * FROM members;
 
 # membersテーブルにどんどん挿入
 川村　A　チーム長
@@ -87,14 +87,14 @@ MySQL [(itope)]> select * from members;
 安田　C　チーム長
 を作成
 
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('李', 'B' , 'メンバー');
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('川村', 'A' , 'チーム長');
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('大谷', 'C' , 'メンバー');
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('松山', 'A' , 'メンバー');
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('野村', 'C' , 'メンバー');
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('雑賀', 'B' , 'メンバー');
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('吉村', 'B' , 'メンバー');
-MySQL [(itope)]> insert into members (name, team, role) VALUES ('安田', 'C' , 'チーム長');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('李', 'B' , 'メンバー');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('川村', 'A' , 'チーム長');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('大谷', 'C' , 'メンバー');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('松山', 'A' , 'メンバー');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('野村', 'C' , 'メンバー');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('雑賀', 'B' , 'メンバー');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('吉村', 'B' , 'メンバー');
+MySQL [(itope)]> INSERT INTO members (name, team, role) VALUES ('安田', 'C' , 'チーム長');
 
 ~~~
 
