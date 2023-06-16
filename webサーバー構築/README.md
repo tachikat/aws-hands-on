@@ -3,7 +3,7 @@
 * nginxインストール
 ~~~
 # nginxインストール
-$ sudo dnf nginx -y
+$ sudo dnf install nginx -y
 
 # nginx起動
 $ sudo systemctl start nginx
