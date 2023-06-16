@@ -19,5 +19,3 @@
 ## SQL操作
 * データベース・テーブル作成
 * insert,select,update,delete操作
-
-## Lambda
